@@ -1,2 +1,8 @@
 // imports
 @use "../abstracts/abstracts" as *;
+
+.container {
+  @include flexCenter;
+  @include maxWidthLg;
+  min-height: 100%;
+}

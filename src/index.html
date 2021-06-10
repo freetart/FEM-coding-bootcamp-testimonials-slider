@@ -15,64 +15,77 @@
   </head>
   <body>
     <!-- quotes carousel -->
-    <section class="glide">
-      <div class="glide__track" data-glide-el="track">
-        <ul class="glide__slides">
-          <!-- single quote -->
-          <li class="glide__slide">
-            <article class="slide">
-              <div class="slide__info">
-                <blockquote>
-                  <h2 class="slide__quote">
-                    “ I’ve been interested in coding for a while but never taken
-                    the jump, until now. I couldn’t recommend this course
-                    enough. I’m now in the job of my dreams and so excited about
-                    the future. ”
-                  </h2>
-                </blockquote>
-                <div class="slide__caption">
-                  <h5 class="slide__name">Tanya Sinclair</h5>
-                  <h5 class="slide__pos">UX Engineer</h5>
+    <div class="container">
+      <section class="glide">
+        <!-- glide track -->
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <!-- single quote -->
+            <li class="glide__slide">
+              <article class="slide">
+                <div class="slide__info">
+                  <blockquote>
+                    <h2 class="slide__quote">
+                      “ I’ve been interested in coding for a while but never
+                      taken the jump, until now. I couldn’t recommend this
+                      course enough. I’m now in the job of my dreams and so
+                      excited about the future. ”
+                    </h2>
+                  </blockquote>
+                  <div class="slide__caption">
+                    <h5 class="slide__name">Tanya Sinclair</h5>
+                    <h5 class="slide__pos">UX Engineer</h5>
+                  </div>
                 </div>
-              </div>
-              <div class="slide__portrait">
-                <img
-                  src="./assets/images/image-tanya.jpg"
-                  alt="testmonial image"
-                  class="slide__img"
-                />
-              </div>
-            </article>
-          </li>
-          <!-- single quote -->
-          <li class="glide__slide">
-            <article class="slide">
-              <div class="slide__info">
-                <blockquote>
-                  <h2 class="slide__quote">
-                    “ If you want to lay the best foundation possible I’d
-                    recommend taking this course. The depth the instructors go
-                    into is incredible. I now feel so confident about starting
-                    up as a professional developer. ”
-                  </h2>
-                </blockquote>
-                <div class="slide__caption">
-                  <h5 class="slide__name">John Tarkpor</h5>
-                  <h5 class="slide__pos">Junior Front-end Developer</h5>
+                <div class="slide__portrait">
+                  <img
+                    src="./assets/images/image-tanya.jpg"
+                    alt="testmonial image"
+                    class="slide__img"
+                  />
                 </div>
-              </div>
-              <div class="slide__portrait">
-                <img
-                  src="./assets/images/image-john.jpg"
-                  alt="testmonial image"
-                  class="slide__img"
-                />
-              </div>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
+              </article>
+            </li>
+            <!-- single quote -->
+            <li class="glide__slide">
+              <article class="slide">
+                <div class="slide__info">
+                  <blockquote>
+                    <h2 class="slide__quote">
+                      “ If you want to lay the best foundation possible I’d
+                      recommend taking this course. The depth the instructors go
+                      into is incredible. I now feel so confident about starting
+                      up as a professional developer. ”
+                    </h2>
+                  </blockquote>
+                  <div class="slide__caption">
+                    <h5 class="slide__name">John Tarkpor</h5>
+                    <h5 class="slide__pos">Front-end Developer</h5>
+                  </div>
+                </div>
+                <div class="slide__portrait">
+                  <img
+                    src="./assets/images/image-john.jpg"
+                    alt="testmonial image"
+                    class="slide__img"
+                  />
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <!-- glide controls -->
+        <div data-glide-el="controls" class="glide__controls">
+          <button data-glide-dir="<" class="glide__btn glide__btn--prev">
+            <img src="./assets/images/icon-prev.svg" alt="button prev icon" />
+          </button>
+          <button data-glide-dir=">" class="glide__btn glide__btn--next">
+            <img src="./assets/images/icon-next.svg" alt="button next icon" />
+          </button>
+        </div>
+      </section>
+    </div>
+
     <!-- glidejs -->
     <script src="../node_modules/@glidejs/glide/dist/glide.js"></script>
     <!-- main js -->

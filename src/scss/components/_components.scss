@@ -1,2 +1,83 @@
 // imports
 @use "../abstracts/abstracts" as *;
+
+.glide {
+  position: relative;
+  &__slides {
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: -3%;
+    right: 37%;
+  }
+
+  &__btn {
+    padding: 2rem;
+    border: 0;
+    outline: 0;
+    background-color: color(black);
+
+    &--prev {
+      border-top-left-radius: 3rem;
+      border-bottom-left-radius: 3rem;
+      margin-right: -0.3rem;
+    }
+
+    &--next {
+      border-top-right-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+    }
+  }
+}
+
+.slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+
+  &__info {
+    transform: translateX(8rem);
+  }
+
+  &__quote {
+    @include textStyles;
+    font-weight: 300;
+    font-size: size(xxl);
+    margin-bottom: 3rem;
+    color: color(darkBlue);
+  }
+
+  &__caption {
+    display: flex;
+    align-items: center;
+  }
+
+  &__name {
+    @include headingStyles;
+    font-size: size(sm);
+    margin-right: 2rem;
+  }
+
+  &__pos {
+    @include textStyles;
+    font-size: size(xxs);
+    color: color(grayishBlue);
+    margin-top: 1rem;
+    transform: rotate(30deg);
+  }
+
+  &__img {
+    height: 100%;
+    border-radius: 1rem;
+  }
+}
