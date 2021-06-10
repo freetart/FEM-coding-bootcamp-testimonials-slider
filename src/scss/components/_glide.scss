@@ -1,0 +1,47 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.glide {
+  position: relative;
+
+  &__slides {
+    overflow-x: hidden;
+
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    bottom: -3%;
+    right: 37%;
+
+    @include responsive(md) {
+      @include flexCenter;
+      position: static;
+    }
+  }
+
+  &__btn {
+    padding: 2rem;
+    border: 0;
+    outline: 0;
+    background-color: color(black);
+
+    &--prev {
+      border-top-left-radius: 3rem;
+      border-bottom-left-radius: 3rem;
+      margin-right: -0.4rem;
+    }
+
+    &--next {
+      border-top-right-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+    }
+  }
+}

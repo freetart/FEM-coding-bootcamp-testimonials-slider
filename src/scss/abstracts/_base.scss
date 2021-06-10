@@ -29,10 +29,13 @@ body {
   width: 100vw;
   overflow-x: hidden;
   position: relative;
+}
 
-  @include responsive(xs) {
-    height: 100%;
-  }
+.container {
+  @include flexCenter;
+  @include maxWidthLg;
+  min-height: 100%;
+  padding: 2rem 0;
 }
 
 a {

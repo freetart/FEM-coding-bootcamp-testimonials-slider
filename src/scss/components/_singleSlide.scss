@@ -1,0 +1,109 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2rem;
+
+  @include responsive(md) {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  @include responsive(xs) {
+    gap: 3rem;
+  }
+
+  &__info {
+    transform: translateX(8rem);
+
+    @include responsive(lg) {
+      transform: translateX(5rem);
+    }
+
+    @include responsive(md) {
+      transform: translateX(0);
+    }
+  }
+
+  &__quote {
+    @include textStyles;
+    font-weight: 300;
+    font-size: size(xxl);
+    margin-bottom: 3rem;
+    color: color(darkBlue);
+
+    @include responsive(lg) {
+      font-size: size(lg);
+    }
+
+    @include responsive(md) {
+      font-size: size(md);
+      text-align: center;
+    }
+
+    @include responsive(sm) {
+      width: auto;
+    }
+  }
+
+  &__caption {
+    display: flex;
+    align-items: center;
+
+    @include responsive(md) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__name {
+    @include headingStyles;
+    font-size: size(sm);
+    margin-right: 1.5rem;
+
+    @include responsive(md) {
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+
+  &__pos {
+    @include textStyles;
+    font-size: size(xxs);
+    color: color(grayishBlue);
+    margin-top: 0.5rem;
+
+    @include responsive(md) {
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__portrait {
+    @include responsive(md) {
+      order: -1;
+      text-align: center;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+
+    @include responsive(md) {
+      max-width: 50%;
+      border-radius: 50%;
+    }
+
+    @include responsive(sm) {
+      max-width: 75%;
+    }
+  }
+}

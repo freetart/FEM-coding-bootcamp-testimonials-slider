@@ -24,10 +24,15 @@ body {
   overflow-x: hidden;
   position: relative;
 }
-@media (max-width: 350px) {
-  body {
-    height: 100%;
-  }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 2rem 0;
 }
 
 a {
@@ -88,7 +93,6 @@ input {
     justify-content: center;
     align-items: center;
     position: static;
-    margin-top: 3rem;
   }
 }
 .glide__btn {
@@ -173,6 +177,7 @@ input {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    padding-bottom: 2rem;
   }
 }
 .slide__name {
@@ -224,16 +229,6 @@ input {
   }
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  min-height: 100%;
-  padding: 2rem 0;
-}
-
 .bg-pattern,
 .bg-curve,
 .bg-quotes {
@@ -268,7 +263,7 @@ input {
 }
 
 .bg-curve {
-  bottom: -5%;
+  bottom: -1%;
   left: -5%;
   width: 75%;
 }

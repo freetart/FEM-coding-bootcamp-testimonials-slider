@@ -1,0 +1,66 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+.bg-pattern,
+.bg-curve,
+.bg-quotes {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-pattern {
+  top: 0;
+  right: 0;
+  width: 45%;
+  opacity: 0.2;
+
+  @include responsive(lg) {
+    top: 10%;
+  }
+
+  @include responsive(md) {
+    right: 25%;
+    width: 70%;
+    top: 0;
+  }
+
+  @include responsive(sm) {
+    right: 10%;
+    width: 90%;
+    top: 5%;
+  }
+}
+
+.bg-curve {
+  bottom: -1%;
+  left: -5%;
+  width: 75%;
+
+  @include responsive(md) {
+    width: 100%;
+  }
+}
+
+.bg-quotes {
+  top: 20%;
+  left: 20%;
+  width: 10%;
+
+  @include responsive(lg) {
+    top: 30%;
+  }
+
+  @include responsive(md) {
+    top: 40%;
+    left: 10%;
+    width: 20%;
+  }
+
+  @include responsive(sm) {
+    top: 50%;
+  }
+
+  @include responsive(xs) {
+    top: 40%;
+  }
+}
