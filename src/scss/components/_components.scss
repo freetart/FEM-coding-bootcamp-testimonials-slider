@@ -3,6 +3,7 @@
 
 .glide {
   position: relative;
+
   &__slides {
     &:hover {
       cursor: grab;
@@ -17,6 +18,12 @@
     position: absolute;
     bottom: -3%;
     right: 37%;
+
+    @include responsive(md) {
+      @include flexCenter;
+      position: static;
+      margin-top: 3rem;
+    }
   }
 
   &__btn {
@@ -28,7 +35,7 @@
     &--prev {
       border-top-left-radius: 3rem;
       border-bottom-left-radius: 3rem;
-      margin-right: -0.3rem;
+      margin-right: -0.4rem;
     }
 
     &--next {
@@ -44,9 +51,27 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
+  padding: 0 2rem;
+
+  @include responsive(md) {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  @include responsive(xs) {
+    gap: 3rem;
+  }
 
   &__info {
     transform: translateX(8rem);
+
+    @include responsive(lg) {
+      transform: translateX(5rem);
+    }
+
+    @include responsive(md) {
+      transform: translateX(0);
+    }
   }
 
   &__quote {
@@ -55,17 +80,39 @@
     font-size: size(xxl);
     margin-bottom: 3rem;
     color: color(darkBlue);
+
+    @include responsive(lg) {
+      font-size: size(lg);
+    }
+
+    @include responsive(md) {
+      font-size: size(md);
+      text-align: center;
+    }
+
+    @include responsive(sm) {
+      width: auto;
+    }
   }
 
   &__caption {
     display: flex;
     align-items: center;
+
+    @include responsive(md) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+    }
   }
 
   &__name {
     @include headingStyles;
     font-size: size(sm);
-    margin-right: 2rem;
+
+    @include responsive(md) {
+      text-align: center;
+    }
   }
 
   &__pos {
@@ -74,10 +121,32 @@
     color: color(grayishBlue);
     margin-top: 1rem;
     transform: rotate(30deg);
+
+    @include responsive(md) {
+      transform: rotate(0);
+      margin-top: 0.2rem;
+    }
+  }
+
+  &__portrait {
+    @include responsive(md) {
+      order: -1;
+      text-align: center;
+    }
   }
 
   &__img {
     height: 100%;
+    width: 100%;
     border-radius: 1rem;
+
+    @include responsive(md) {
+      max-width: 50%;
+      border-radius: 50%;
+    }
+
+    @include responsive(sm) {
+      max-width: 75%;
+    }
   }
 }

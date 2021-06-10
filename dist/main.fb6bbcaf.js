@@ -3188,7 +3188,7 @@ function Controls(Glide, Components, Events) {
      * @return {Void}
      */
     click: function click(event) {
-      event.preventDefault();
+      event.stopPropagation();
       Components.Run.make(Components.Direction.resolve(event.currentTarget.getAttribute('data-glide-dir')));
     }
   };
@@ -3607,8 +3607,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var quotesCarousel = function quotesCarousel() {
   var quotesCarouselConfig = {
     type: "carousel",
-    autoplay: 5000,
-    perView: 1
+    autoplay: 12000,
+    perView: 1,
+    hoverpause: true
   };
   new _glide.default(".glide", quotesCarouselConfig).mount();
 };
