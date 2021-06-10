@@ -11,12 +11,23 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (max-width: 350px) {
+  html {
+    font-size: 55.5%;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  position: relative;
+}
+@media (max-width: 350px) {
+  body {
+    height: 100%;
+  }
 }
 
 a {
@@ -56,6 +67,9 @@ input {
 }
 .glide {
   position: relative;
+}
+.glide__slides {
+  overflow-x: hidden;
 }
 .glide__slides:hover {
   cursor: grab;
@@ -166,10 +180,12 @@ input {
   letter-spacing: 0.1rem;
   line-height: 1.3;
   font-size: 1.8rem;
+  margin-right: 1.5rem;
 }
 @media (max-width: 800px) {
   .slide__name {
     text-align: center;
+    margin-right: 0;
   }
 }
 .slide__pos {
@@ -178,12 +194,10 @@ input {
   line-height: 1.5;
   font-size: 1.3rem;
   color: #babacf;
-  margin-top: 1rem;
-  transform: rotate(30deg);
+  margin-top: 0.5rem;
 }
 @media (max-width: 800px) {
   .slide__pos {
-    transform: rotate(0);
     margin-top: 0.2rem;
   }
 }
@@ -217,6 +231,79 @@ input {
   max-width: 1400px;
   margin: 0 auto;
   min-height: 100%;
+  padding: 2rem 0;
+}
+
+.bg-pattern,
+.bg-curve,
+.bg-quotes {
+  position: absolute;
+  z-index: -1;
+}
+
+.bg-pattern {
+  top: 0;
+  right: 0;
+  width: 45%;
+  opacity: 0.2;
+}
+@media (max-width: 1060px) {
+  .bg-pattern {
+    top: 10%;
+  }
+}
+@media (max-width: 800px) {
+  .bg-pattern {
+    right: 25%;
+    width: 70%;
+    top: 0;
+  }
+}
+@media (max-width: 500px) {
+  .bg-pattern {
+    right: 10%;
+    width: 90%;
+    top: 5%;
+  }
+}
+
+.bg-curve {
+  bottom: -5%;
+  left: -5%;
+  width: 75%;
+}
+@media (max-width: 800px) {
+  .bg-curve {
+    width: 100%;
+  }
+}
+
+.bg-quotes {
+  top: 20%;
+  left: 20%;
+  width: 10%;
+}
+@media (max-width: 1060px) {
+  .bg-quotes {
+    top: 30%;
+  }
+}
+@media (max-width: 800px) {
+  .bg-quotes {
+    top: 40%;
+    left: 10%;
+    width: 20%;
+  }
+}
+@media (max-width: 500px) {
+  .bg-quotes {
+    top: 50%;
+  }
+}
+@media (max-width: 350px) {
+  .bg-quotes {
+    top: 40%;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
